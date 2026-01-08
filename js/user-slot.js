@@ -17,3 +17,9 @@ function loadUserSlots(bunkId) {
       console.log("User slots loaded for bunk:", bunkId);
     });
 }
+
+
+marker.addListener("click", () => {
+  infoWindow.open(map, marker);
+  loadUserSlots(doc.id);
+});

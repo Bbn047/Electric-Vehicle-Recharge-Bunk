@@ -47,7 +47,3 @@ function loadBunks() {
 }
 
 
-marker.addListener("click", () => {
-  infoWindow.open(map, marker);
-  loadUserSlots(doc.id);
-});
