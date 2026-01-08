@@ -1,10 +1,16 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyD3uKYbfIsQqCIn5atbplJHq6MOMXw1ckw",
-  authDomain: "electric-vehicle-recharg-ba1bd.firebaseapp.com",
-  projectId: "electric-vehicle-recharg-ba1bd",
-  storageBucket: "electric-vehicle-recharg-ba1bd.firebasestorage.app",
-  messagingSenderId: "386828433766",
-  appId: "1:386828433766:web:64088d545ed25e2dd0b0a7",
-  measurementId: "G-PH0FFLWTCD"
-};
+    apiKey: "AIzaSyD2KxHxYYrp-qKiV6LS24UCe3p-nnJvgb4",
+    authDomain: "ev-recharge-afcf0.firebaseapp.com",
+    projectId: "ev-recharge-afcf0",
+    storageBucket: "ev-recharge-afcf0.firebasestorage.app",
+    messagingSenderId: "1090414002132",
+    appId: "1:1090414002132:web:877467701f7bfc88ec6041",
+    measurementId: "G-FYCSRCYFZD"
+  };
+
+   // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+  // Initialize Cloud Firestore and get a reference to the service
+const db = firebase.firestore();
