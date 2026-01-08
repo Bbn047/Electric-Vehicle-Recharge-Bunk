@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+</head>
+<body>
+
+<h2>Admin Dashboard – Add EV Bunk</h2>
+
+<input type="text" id="bunkName" placeholder="Bunk Name" /><br><br>
+<input type="text" id="address" placeholder="Address" /><br><br>
+<input type="text" id="mobile" placeholder="Mobile Number" /><br><br>
+<input type="text" id="latitude" placeholder="Latitude" /><br><br>
+<input type="text" id="longitude" placeholder="Longitude" /><br><br>
+
+<button onclick="addBunk()">Add EV Bunk</button>
+
+<hr>
+<h3>Create Recharge Slot</h3>
+
+<input type="text" id="slotBunkId" placeholder="EV Bunk ID" /><br><br>
+<input type="text" id="slotTime" placeholder="Slot Time (10:00 - 11:00)" /><br><br>
+
+<button onclick="addSlot()">Add Slot</button>
+
+<ul id="slotList"></ul>
+
+
+<hr>
+<h3>EV Bunk List</h3>
+<ul id="bunkList"></ul>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
+
+<script src="js/firebase-config.js"></script>
+<script src="js/bunk.js"></script>
+<script src="js/slot.js"></script>
+
+
+</body>
+</html>
