@@ -4,13 +4,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EV-Recharge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href='https://cdn.boxicons.com/3.0.7/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/3.0.7/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+    <!--Header section -->
+
+    <div class="header-content">
+        <header class="d-flex flex-wrap  py-2 mb-2 head-items"> <a href="/"
+                class="d-flex align-items-center  mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none brand">
+                <div class="brand-icon"><i class='bx  bx-petrol-pump' style='color:#0bec18'></i> </div>
+                <span class="fs-4 brand-name">EV-BUNK</span>
+            </a>
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="col-md-3 text-center login-sign"> <button type="button"
+                    class="btn btn-outline-primary me-2">Login</button> <button type="button"
+                    class="btn btn-primary">Sign-up</button>
+            </div>
+        </header>
+
+    </div>
+
+
+    <!--Main content section-->
+    <section class="main-section">
+
+        <!--wave svg section -->
+        <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 250" version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                    <stop stop-color="rgba(255, 255, 255, 1)" offset="0%"></stop>
+                    <stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop>
+                </linearGradient>
+            </defs>
+            <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+                d="M0,200L40,187.5C80,175,160,150,240,133.3C320,117,400,108,480,120.8C560,133,640,167,720,158.3C800,150,880,100,960,104.2C1040,108,1120,167,1200,158.3C1280,150,1360,75,1440,58.3C1520,42,1600,83,1680,104.2C1760,125,1840,125,1920,104.2C2000,83,2080,42,2160,45.8C2240,50,2320,100,2400,129.2C2480,158,2560,167,2640,166.7C2720,167,2800,158,2880,158.3C2960,158,3040,167,3120,166.7C3200,167,3280,158,3360,154.2C3440,150,3520,150,3600,141.7C3680,133,3760,117,3840,112.5C3920,108,4000,117,4080,116.7C4160,117,4240,108,4320,104.2C4400,100,4480,100,4560,95.8C4640,92,4720,83,4800,70.8C4880,58,4960,42,5040,62.5C5120,83,5200,142,5280,166.7C5360,192,5440,183,5520,183.3C5600,183,5680,192,5720,195.8L5760,200L5760,250L5720,250C5680,250,5600,250,5520,250C5440,250,5360,250,5280,250C5200,250,5120,250,5040,250C4960,250,4880,250,4800,250C4720,250,4640,250,4560,250C4480,250,4400,250,4320,250C4240,250,4160,250,4080,250C4000,250,3920,250,3840,250C3760,250,3680,250,3600,250C3520,250,3440,250,3360,250C3280,250,3200,250,3120,250C3040,250,2960,250,2880,250C2800,250,2720,250,2640,250C2560,250,2480,250,2400,250C2320,250,2240,250,2160,250C2080,250,2000,250,1920,250C1840,250,1760,250,1680,250C1600,250,1520,250,1440,250C1360,250,1280,250,1200,250C1120,250,1040,250,960,250C880,250,800,250,720,250C640,250,560,250,480,250C400,250,320,250,240,250C160,250,80,250,40,250L0,250Z">
+            </path>
+        </svg>
+
+        <div class="main-container">
+            <div class="main-text">
+                <h2>Find & Book</h2>
+                <h2>Electric Vehicle</h2>
+                <h2>Charging Slots Easily</h2>
+                <p>Locate nearby EVcharging stations and book your slot in seconds</p>
+                <div class="col-md-3 text-center get-start"><button type="button" class="btn  me-2">Get started</button>
+                </div>
+            </div>
+
+            <div class="main-image">
+                <img src="./assets/images/home-image.png" alt="image">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- main content botton section-->
+    <section class="bottom-section">
+        <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 170" version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                    <stop stop-color="rgba(255, 255, 255, 1)" offset="0%"></stop>
+                    <stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop>
+                </linearGradient>
+            </defs>
+            <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+                d="M0,136L40,127.5C80,119,160,102,240,90.7C320,79,400,74,480,82.2C560,91,640,113,720,107.7C800,102,880,68,960,70.8C1040,74,1120,113,1200,107.7C1280,102,1360,51,1440,39.7C1520,28,1600,57,1680,70.8C1760,85,1840,85,1920,70.8C2000,57,2080,28,2160,31.2C2240,34,2320,68,2400,87.8C2480,108,2560,113,2640,113.3C2720,113,2800,108,2880,107.7C2960,108,3040,113,3120,113.3C3200,113,3280,108,3360,104.8C3440,102,3520,102,3600,96.3C3680,91,3760,79,3840,76.5C3920,74,4000,79,4080,79.3C4160,79,4240,74,4320,70.8C4400,68,4480,68,4560,65.2C4640,62,4720,57,4800,48.2C4880,40,4960,28,5040,42.5C5120,57,5200,96,5280,113.3C5360,130,5440,125,5520,124.7C5600,125,5680,130,5720,133.2L5760,136L5760,170L5720,170C5680,170,5600,170,5520,170C5440,170,5360,170,5280,170C5200,170,5120,170,5040,170C4960,170,4880,170,4800,170C4720,170,4640,170,4560,170C4480,170,4400,170,4320,170C4240,170,4160,170,4080,170C4000,170,3920,170,3840,170C3760,170,3680,170,3600,170C3520,170,3440,170,3360,170C3280,170,3200,170,3120,170C3040,170,2960,170,2880,170C2800,170,2720,170,2640,170C2560,170,2480,170,2400,170C2320,170,2240,170,2160,170C2080,170,2000,170,1920,170C1840,170,1760,170,1680,170C1600,170,1520,170,1440,170C1360,170,1280,170,1200,170C1120,170,1040,170,960,170C880,170,800,170,720,170C640,170,560,170,480,170C400,170,320,170,240,170C160,170,80,170,40,170L0,170Z">
+            </path>
+        </svg>
+        <div class="bottom-content">
+
+            <div class="bottom-data">
+                <h3>How it Works</h3>
+                <p>Find EV charging stations nearby, check slot availability, and book a slot to charge your vehicle
+                    without waiting</p>
+            </div>
+
+            <div class="bottom-icons">
+                <div class="icons-box">
+                    <div class="icon-wrapper">
+                        <div class="icon-items">
+                            <img src="./assets/icons/location.png" alt="">
+                            <h5>Search Station</h5>
+                            <p>Find nearby charging stations</p>
+                        </div>
+                        <div class="icon-items">
+                            <img src="./assets/icons/collender.png" alt="">
+                            <h5>Book Slot</h5>
+                            <p>Select your convinient time slot</p>
+                        </div>
+                        <div class="icon-items">
+                            <img src="./assets/icons/station.png" alt="">
+                            <h5>Charge & Go</h5>
+                            <p>Charge your EV and hit the road</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <!--wave svg section -->
+        <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 170" version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                    <stop stop-color="rgba(255, 255, 255, 1)" offset="0%"></stop>
+                    <stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop>
+                </linearGradient>
+            </defs>
+            <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+                d="M0,136L30,127.5C60,119,120,102,180,90.7C240,79,300,74,360,82.2C420,91,480,113,540,107.7C600,102,660,68,720,70.8C780,74,840,113,900,107.7C960,102,1020,51,1080,39.7C1140,28,1200,57,1260,70.8C1320,85,1380,85,1440,70.8C1500,57,1560,28,1620,31.2C1680,34,1740,68,1800,87.8C1860,108,1920,113,1980,113.3C2040,113,2100,108,2160,107.7C2220,108,2280,113,2340,113.3C2400,113,2460,108,2520,104.8C2580,102,2640,102,2700,96.3C2760,91,2820,79,2880,76.5C2940,74,3000,79,3060,79.3C3120,79,3180,74,3240,70.8C3300,68,3360,68,3420,65.2C3480,62,3540,57,3600,48.2C3660,40,3720,28,3780,42.5C3840,57,3900,96,3960,113.3C4020,130,4080,125,4140,124.7C4200,125,4260,130,4290,133.2L4320,136L4320,170L4290,170C4260,170,4200,170,4140,170C4080,170,4020,170,3960,170C3900,170,3840,170,3780,170C3720,170,3660,170,3600,170C3540,170,3480,170,3420,170C3360,170,3300,170,3240,170C3180,170,3120,170,3060,170C3000,170,2940,170,2880,170C2820,170,2760,170,2700,170C2640,170,2580,170,2520,170C2460,170,2400,170,2340,170C2280,170,2220,170,2160,170C2100,170,2040,170,1980,170C1920,170,1860,170,1800,170C1740,170,1680,170,1620,170C1560,170,1500,170,1440,170C1380,170,1320,170,1260,170C1200,170,1140,170,1080,170C1020,170,960,170,900,170C840,170,780,170,720,170C660,170,600,170,540,170C480,170,420,170,360,170C300,170,240,170,180,170C120,170,60,170,30,170L0,170Z">
+            </path>
+        </svg>
+
+    </section>
 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
