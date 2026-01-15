@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-clr: linear-gradient(180deg, #F1F6F5, #ffffff);
+    --bg-sd-clr: #e4e4e4;
+    --second-bg-clr: white;
+    --selection-clr: #13ca87;
+    --text-clr: black;
+}
+
+body {
+    font-family: -apple-system, sans-serif;
+    color: var(--text-clr);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+section {
+    background: var(--bg-clr);
+    margin: 0;
+    padding: 0;
+}
+
+section #wave {
+    display: block;
+    width: 100%;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*---------------navbar section --------------------*/
+nav .header-content{
+    display: flex;
+    align-items: center;
+}

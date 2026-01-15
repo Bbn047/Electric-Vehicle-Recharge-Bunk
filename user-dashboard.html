@@ -1,37 +1,99 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>User Dashboard</title>
-  <style>
-    #map {
-      height: 500px;
-      width: 100%;
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href='https://cdn.boxicons.com/3.0.7/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/3.0.7/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Gruppo">
+  <link rel="stylesheet" href="./css/user-style.css">
 </head>
+
 <body>
+  <!--navbar -->
+ <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+  <div class="container-fluid">
 
-<h2>Nearby EV Charging Bunks</h2>
-<div id="map"></div>
+    <!-- BRAND (LEFT) -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <i class='bx bx-petrol-pump me-2 fs-4' style="color:#0bec18;"></i>
+      <strong>EV-BUNK</strong>
+    </a>
 
-<hr>
-<h3>Available Slots</h3>
-<ul id="userSlotList"></ul>
+    <!-- TOGGLER -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- NAV CONTENT -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <!-- CENTER / RIGHT NAV LINKS -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">My Bookings</a>
+        </li>
+
+        <!-- NOTIFICATION BELL -->
+        <li class="nav-item mx-2">
+          <a class="nav-link position-relative" href="#">
+            <i class='bx bxs-bell fs-5'></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              3
+            </span>
+          </a>
+        </li>
+
+        <!-- PROFILE DROPDOWN -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center"
+            href="#" role="button" data-bs-toggle="dropdown">
+
+            <i class='bx bxs-user-circle fs-4 me-1'></i>
+            <span id="username">User</span>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <button class="dropdown-item text-danger" onclick="logout()">
+                Logout
+              </button>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
 
 
-<script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
-    <script src="js/firebase-config.js"></script>
-    <script src="js/map.js"></script>
-    <script src="js/user-slot.js
+
+
+  <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/user-slot.js
     "></script>
 
-<!-- Google Maps -->
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"
-  async defer>
-</script>
+  <!-- Google Maps -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer>
+  </script>
 
 </body>
+
 </html>

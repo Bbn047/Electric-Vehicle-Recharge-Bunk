@@ -9,32 +9,46 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href='https://cdn.boxicons.com/3.0.7/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
     <link href='https://cdn.boxicons.com/3.0.7/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Gruppo">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <!--Header section -->
+    <nav class="navbar navbar-expand-lg sticky-top head-items">
+        <div class="container-fluid me-3 ms-3">
 
-    <div class="header-content">
-        <header class="d-flex flex-wrap  py-2 mb-2 head-items"> <a href="/"
-                class="d-flex align-items-center  mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none brand">
-                <div class="brand-icon"><i class='bx  bx-petrol-pump' style='color:#0bec18'></i> </div>
-                <span class="fs-4 brand-name">EV-BUNK</span>
+            <!-- BRAND -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class='bx bx-petrol-pump me-2 fs-3' style="color:#0bec18;"></i>
+                <span class="fs-3 brand-name ms-2">EV-BUNK</span>
             </a>
-            <i class='bx bx-menu' id="menu-icon"></i>
-            <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#" class="nav-link" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="col-md-3 text-center login-sign"> <button type="button"
-                    class="btn btn-outline-primary me-2">Login</button> <button type="button"
-                    class="btn btn-primary">Sign-up</button>
-            </div>
-        </header>
 
-    </div>
+            <!-- TOGGLER -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- COLLAPSIBLE CONTENT -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <!-- NAV LINKS -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+
+                <!-- LOGIN BUTTONS -->
+                <div class="d-flex ms-lg-3 gap-2 login-sign">
+                    <button class="btn  login  me-2">Login</button>
+                    <button class="btn sign-up">Sign-up</button>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
 
 
     <!--Main content section-->
@@ -85,32 +99,33 @@
                 d="M0,136L40,127.5C80,119,160,102,240,90.7C320,79,400,74,480,82.2C560,91,640,113,720,107.7C800,102,880,68,960,70.8C1040,74,1120,113,1200,107.7C1280,102,1360,51,1440,39.7C1520,28,1600,57,1680,70.8C1760,85,1840,85,1920,70.8C2000,57,2080,28,2160,31.2C2240,34,2320,68,2400,87.8C2480,108,2560,113,2640,113.3C2720,113,2800,108,2880,107.7C2960,108,3040,113,3120,113.3C3200,113,3280,108,3360,104.8C3440,102,3520,102,3600,96.3C3680,91,3760,79,3840,76.5C3920,74,4000,79,4080,79.3C4160,79,4240,74,4320,70.8C4400,68,4480,68,4560,65.2C4640,62,4720,57,4800,48.2C4880,40,4960,28,5040,42.5C5120,57,5200,96,5280,113.3C5360,130,5440,125,5520,124.7C5600,125,5680,130,5720,133.2L5760,136L5760,170L5720,170C5680,170,5600,170,5520,170C5440,170,5360,170,5280,170C5200,170,5120,170,5040,170C4960,170,4880,170,4800,170C4720,170,4640,170,4560,170C4480,170,4400,170,4320,170C4240,170,4160,170,4080,170C4000,170,3920,170,3840,170C3760,170,3680,170,3600,170C3520,170,3440,170,3360,170C3280,170,3200,170,3120,170C3040,170,2960,170,2880,170C2800,170,2720,170,2640,170C2560,170,2480,170,2400,170C2320,170,2240,170,2160,170C2080,170,2000,170,1920,170C1840,170,1760,170,1680,170C1600,170,1520,170,1440,170C1360,170,1280,170,1200,170C1120,170,1040,170,960,170C880,170,800,170,720,170C640,170,560,170,480,170C400,170,320,170,240,170C160,170,80,170,40,170L0,170Z">
             </path>
         </svg>
-        <div class="bottom-content">
 
-            <div class="bottom-data">
+        <div class="bottom-content">
+            <div class="text-data">
                 <h3>How it Works</h3>
+
                 <p>Find EV charging stations nearby, check slot availability, and book a slot to charge your vehicle
                     without waiting</p>
+
             </div>
 
-            <div class="bottom-icons">
-                <div class="icons-box">
-                    <div class="icon-wrapper">
-                        <div class="icon-items">
-                            <img src="./assets/icons/location.png" alt="">
-                            <h5>Search Station</h5>
-                            <p>Find nearby charging stations</p>
-                        </div>
-                        <div class="icon-items">
-                            <img src="./assets/icons/collender.png" alt="">
-                            <h5>Book Slot</h5>
-                            <p>Select your convinient time slot</p>
-                        </div>
-                        <div class="icon-items">
-                            <img src="./assets/icons/station.png" alt="">
-                            <h5>Charge & Go</h5>
-                            <p>Charge your EV and hit the road</p>
-                        </div>
+            <div class="icons-box">
+
+                <div class="icon-wrapper">
+                    <div class="icon-items">
+                        <img src="./assets/icons/location.png" alt="">
+                        <h5>Search Station</h5>
+                        <p>Find nearby charging stations</p>
+                    </div>
+                    <div class="icon-items">
+                        <img src="./assets/icons/collender.png" alt="">
+                        <h5>Book Slot</h5>
+                        <p>Select your convinient time slot</p>
+                    </div>
+                    <div class="icon-items">
+                        <img src="./assets/icons/station.png" alt="">
+                        <h5>Charge & Go</h5>
+                        <p>Charge your EV and hit the road</p>
                     </div>
                 </div>
             </div>

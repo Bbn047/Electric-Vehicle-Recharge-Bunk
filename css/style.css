@@ -6,7 +6,6 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: -apple-system, sans-serif;
 }
 
 :root {
@@ -15,6 +14,15 @@
     --second-bg-clr: white;
     --selection-clr: #13ca87;
     --text-clr: black;
+}
+
+body {
+    font-family: -apple-system, sans-serif;
+    color: var(--text-clr);
+}
+
+body p {
+    font-family: Italianno;
 }
 
 html {
@@ -35,27 +43,16 @@ section #wave {
     padding: 0;
 }
 
-/*-----header section ----- */
-#menu-icon {
-    font-size: 3.5rem;
-    color: var(--text-clr);
-    cursor: pointer;
-    display: none;
-}
-
-.header-content {
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
+/*-----navbar section ----- */
+.navbar {
     background: var(--second-bg-clr);
+    z-index: 1000;
+    font-size: 15px;
+
 }
 
-.head-items {
-    align-items: center;
-    justify-content: center;
-    padding-left: 10px;
-    margin-left:30px;
-    margin-right: 20px;
+.nav-link {
+    color: var(--text-clr);
 }
 
 .brand {
@@ -63,21 +60,30 @@ section #wave {
 }
 
 .brand-icon i {
-    font-size: 45px;
+    font-size: 30px;
+    ;
 }
 
-header .brand-name {
+.brand-name {
+    font-family: Italianno;
     font-weight: bold;
 }
 
 .login-sign .btn {
-    border: none;
+    border-color: var(--selection-clr);
     border-radius: 15px;
     width: 100px;
+    color: var(--text-clr);
+
 }
 
-.btn-primary {
+.sign-up {
     background: var(--selection-clr);
+}
+
+.login,
+.sign-up {
+    font-size: 15px;
 }
 
 
@@ -90,20 +96,22 @@ header .brand-name {
 .main-container {
     position: relative;
     top: -70px;
-    /* adjust if needed */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .main-image {
-    width: 50%;
     text-align: right;
 }
 
-.main-image img {
-    width: 100%;
-    max-width: 450px;
+.main-text h2 {
+    font-family: audiowide, sans-serif;
+}
+
+.main-text p {
+    margin-top: 20px;
+    font-family: Italianno;
 }
 
 .main-text .get-start {
@@ -116,24 +124,30 @@ header .brand-name {
 .bottom-content {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.text-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
-.bottom-icons {
-    margin-top: 20px;
-    background-size: cover;
+.icon-box {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    margin-bottom: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .icon-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .icon-items {
@@ -157,3 +171,75 @@ header .brand-name {
 .icon-items img {
     width: 70px;
 }
+
+.bottom-data h3 {
+    font-family: Italianno;
+    font-weight: bold;
+}
+
+
+
+
+/* ----------responsive css -------------*/
+/* Mobile */
+@media (max-width: 576px) {
+    .section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* --------main section------------ */
+    
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .main-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .main-image img{
+        width: 99vw;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    /*----------bottom section -----------*/
+    .bottom-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .text-data{
+    width: 90vw;
+    }
+    
+}
+
+/* Tablet */
+@media (max-width: 768px) {}
+
+/* Laptop */
+@media (max-width: 992px) {
+    .icon-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        width: 90vw;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+    
+}
+
+
+/* Desktop */
+@media (max-width: 1200px) {}
