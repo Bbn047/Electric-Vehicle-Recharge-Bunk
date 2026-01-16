@@ -41,7 +41,67 @@ section #wave {
 
 
 /*---------------navbar section --------------------*/
-nav .header-content{
+.navbar {
+    background: var(--second-bg-clr);
+    z-index: 1000;
+    font-size: 15px;
+
+}
+
+.nav-link {
+    color: var(--text-clr);
+}
+
+.brand {
+    gap: 10px;
+}
+
+.brand-icon i {
+    font-size: 30px;
+    ;
+}
+
+.brand-name {
+    font-family: Italianno;
+    font-weight: bold;
+}
+
+.welcome-text {
+    justify-content: center;
+}
+
+.text-items {
+    margin-left: 8px;
+    font-size: 15px;
+}
+
+/*---- body section ----*/
+.page-wrapper {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+}
+
+.custom-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 25px;
+    padding: 13px;
+}
+
+
+/*------charging and booking ---------*/
+.main-content{
+    margin-left: 25px;
+    padding-top: 20px;
+}
+
+.charging-booking{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.booking-status{
+    min-height: 150px;
 }

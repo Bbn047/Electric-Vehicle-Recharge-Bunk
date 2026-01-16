@@ -28,46 +28,92 @@
       </button>
 
       <!-- COLLAPSIBLE CONTENT -->
-      <div class="collapse navbar-collapse d-flex align-items-center" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarNav">
 
-        <!-- notifiaction -->
-        <ul class="navbar-nav ms-auto d-flex align-items-center ">
-          <li class="nav-item ">
+        <ul class="navbar-nav ms-auto d-flex align-items-center">
+
+          <!-- Notification -->
+          <li class="nav-item me-3">
             <a class="nav-link" href="#">
-              <i class='bx bx-bell d-flex fs-3' style="color:#0bec18"></i>
+              <i class='bx bx-bell fs-4' style="color:#0bec18"></i>
             </a>
           </li>
+
+          <!-- Welcome text -->
+          <li class="nav-item d-flex align-items-center me-3">
+            <span class="text-items">Welcome,</span>
+            <span class="text-items fw-semibold ms-1" id="username">John</span>
+          </li>
+
+          <!-- Profile dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-0" href="#" data-bs-toggle="dropdown">
+              <img src="https://github.com/mdo.png" width="32" height="32" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </li>
+
         </ul>
-
-
-        <!--welocme text-->
-        <div class="welcome-text d-flex align-items-center">
-          <span class="text-items">Welcome,</span>
-          <span class="text-items fw-semibold me-2" id="username">John</span>
-        </div>
-
-
-        <!-- Profile section -->
-        <div class="dropdown text-end">
-          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
-            aria-expanded="false"> <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32"
-              class="rounded-circle">
-          </a>
-          <ul class="dropdown-menu text-small" style="">
-            <li><a class="dropdown-item" href="#">New project...</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
-          </ul>
-        </div>
-
       </div>
+
     </div>
   </nav>
 
+
+  <!---- body section  -->
+  <div class="main-content">
+
+    <!----heading section----->
+    <div class="welcome-note">
+      <h3 class="heading">Welcome to your Dashboard</h3>
+      <p>Book your EV charging slots conviniently</p>
+    </div>
+
+    <div class="page-wrapper">
+      <div class="container-fluid custom-grid">
+
+        <!----charging and booking section----->
+        <div class="charging-booking">
+          <div class="booking-status booking">My Booking</div>
+          <div class="booking-status charge">Charging Status</div>
+        </div>
+
+        <!---Bunk list---->
+        <div class="bunk-list">
+
+          <!---search bunk location ------>
+          <div class="search">
+            <h5>Find Charging Station</h4>
+          </div>
+
+          <!---nearby bunk list----->
+          <div class="near-stations">
+            <div class="one">station 1</div>
+            <div class="two">station 2</div>
+            <div class="three">station 3</div>
+          </div>
+
+          <!----history section---->
+          <div class="history">View Booking History</div>
+
+        </div>
+
+
+        <!-----map loction ----->
+        <div class="map">map</div>
+
+
+
+      </div>
+    </div>
+  </div>
 
 
 
