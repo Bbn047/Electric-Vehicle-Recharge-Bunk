@@ -1,49 +1,32 @@
-let map;
-
 function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 20.5937, lng: 78.9629 },
-    zoom: 5
+  const centerLocation = { lat: 12.9716, lng: 77.5946 }; // Example: Bangalore
+
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 13,
+    center: centerLocation,
   });
 
-  console.log("Map initialized");
-  loadBunks();
-}
+  // Example charging stations
+  const stations = [
+    { name: "EV Bunk – MG Road", position: { lat: 12.975, lng: 77.605 } },
+    { name: "GreenCharge Hub", position: { lat: 12.965, lng: 77.585 } },
+    { name: "Volt Station", position: { lat: 12.982, lng: 77.59 } },
+  ];
 
-function loadBunks() {
-  db.collection("evBunks").get()
-    .then((snapshot) => {
-      snapshot.forEach((doc) => {
-        const bunk = doc.data();
-
-        const marker = new google.maps.Marker({
-          position: {
-            lat: Number(bunk.location.lat),
-            lng: Number(bunk.location.lng)
-          },
-          map: map,
-          title: bunk.name
-        });
-
-        const infoWindow = new google.maps.InfoWindow({
-          content: `
-            <h4>${bunk.name}</h4>
-            <p>${bunk.address}</p>
-            <p>Mobile: ${bunk.mobile}</p>
-          `
-        });
-
-        marker.addListener("click", () => {
-          infoWindow.open(map, marker);
-          console.log("Bunk clicked:", bunk.name);
-        });
-      });
-
-      console.log("EV bunks loaded on map");
-    })
-    .catch((error) => {
-      console.error("Error loading bunks:", error);
+  stations.forEach((station) => {
+    const marker = new google.maps.Marker({
+      position: station.position,
+      map,
+      title: station.name,
+      icon: "https://maps.google.com/mapfiles/ms/icons/green-dot.png",
     });
+
+    const infoWindow = new google.maps.InfoWindow({
+      content: `<strong>${station.name}</strong>`,
+    });
+
+    marker.addListener("click", () => {
+      infoWindow.open(map, marker);
+    });
+  });
 }
-
-

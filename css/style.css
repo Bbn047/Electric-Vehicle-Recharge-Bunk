@@ -46,7 +46,7 @@ section #wave {
 .navbar {
     background: var(--second-bg-clr);
     z-index: 1000;
-    font-size: 15px;
+    font-size: 20px;
 
 }
 
@@ -60,7 +60,6 @@ section #wave {
 
 .brand-icon i {
     font-size: 30px;
-    ;
 }
 
 .brand-name {

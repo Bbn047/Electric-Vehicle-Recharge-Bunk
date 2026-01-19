@@ -68,54 +68,147 @@
 
 
   <!---- body section  -->
-  <div class="main-content">
+  <section class="main-section">
 
-    <!----heading section----->
-    <div class="welcome-note">
-      <h3 class="heading">Welcome to your Dashboard</h3>
-      <p>Book your EV charging slots conviniently</p>
+    <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 120" version="1.1"
+      xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+          <stop stop-color="rgba(241, 246, 245, 1)" offset="0%"></stop>
+          <stop stop-color="rgba(241, 246, 245, 1)" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+      <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+        d="M0,12L21.8,24C43.6,36,87,60,131,64C174.5,68,218,52,262,46C305.5,40,349,44,393,50C436.4,56,480,64,524,56C567.3,48,611,24,655,30C698.2,36,742,72,785,72C829.1,72,873,36,916,26C960,16,1004,32,1047,50C1090.9,68,1135,88,1178,84C1221.8,80,1265,52,1309,42C1352.7,32,1396,40,1440,54C1483.6,68,1527,88,1571,90C1614.5,92,1658,76,1702,74C1745.5,72,1789,84,1833,88C1876.4,92,1920,88,1964,72C2007.3,56,2051,28,2095,24C2138.2,20,2182,40,2225,52C2269.1,64,2313,68,2356,72C2400,76,2444,80,2487,74C2530.9,68,2575,52,2618,42C2661.8,32,2705,28,2749,22C2792.7,16,2836,8,2880,8C2923.6,8,2967,16,3011,24C3054.5,32,3098,40,3120,44L3141.8,48L3141.8,120L3120,120C3098.2,120,3055,120,3011,120C2967.3,120,2924,120,2880,120C2836.4,120,2793,120,2749,120C2705.5,120,2662,120,2618,120C2574.5,120,2531,120,2487,120C2443.6,120,2400,120,2356,120C2312.7,120,2269,120,2225,120C2181.8,120,2138,120,2095,120C2050.9,120,2007,120,1964,120C1920,120,1876,120,1833,120C1789.1,120,1745,120,1702,120C1658.2,120,1615,120,1571,120C1527.3,120,1484,120,1440,120C1396.4,120,1353,120,1309,120C1265.5,120,1222,120,1178,120C1134.5,120,1091,120,1047,120C1003.6,120,960,120,916,120C872.7,120,829,120,785,120C741.8,120,698,120,655,120C610.9,120,567,120,524,120C480,120,436,120,393,120C349.1,120,305,120,262,120C218.2,120,175,120,131,120C87.3,120,44,120,22,120L0,120Z">
+      </path>
+    </svg>
+
+    <div class="main-container">
+      <!----heading section----->
+      <div class="welcome-note">
+        <h3 class="heading">Welcome to your Dashboard</h3>
+        <p>Book your EV charging slots conviniently</p>
+      </div>
+
     </div>
+  </section>
+
+  <!--------page section ------>
+  <section class="body-section">
 
     <div class="page-wrapper">
       <div class="container-fluid custom-grid">
 
         <!----charging and booking section----->
-        <div class="charging-booking">
-          <div class="booking-status booking">My Booking</div>
-          <div class="booking-status charge">Charging Status</div>
+        <div class="col one charging-booking">
+          <div class="booking-box">
+            <div class="booking-status">
+              <div class="booking-title">
+                <span><i class='bx  bx-book-library' style='color:#0bec18'></i></span>
+                <h5 class="booking-heading"> My Booking</h5>
+              </div>
+              <div class="booking-data ms-3 mt-3">
+                <p>next booking</p>
+                <p>station details</p>
+              </div>
+            </div>
+            <div class="charging-status">
+              <div class="charging-title">
+                <span><i class='bx  bx-bolt-circle' style='color:#f9f512'></i> </span>
+                <h5 class="charging-heading">Charging Status</h5>
+              </div>
+              <div class="charging-data ms-3 mt-3">
+                <p>charging</p>
+                <p>time remaining</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!---Bunk list---->
-        <div class="bunk-list">
+        <div class="col two bunk-list">
 
           <!---search bunk location ------>
           <div class="search">
-            <h5>Find Charging Station</h4>
+            <h>Find Charging Station</h>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
           </div>
 
-          <!---nearby bunk list----->
-          <div class="near-stations">
-            <div class="one">station 1</div>
-            <div class="two">station 2</div>
-            <div class="three">station 3</div>
-          </div>
+          <!-----map loction ----->
+          <!-- Map & Nearby Stations -->
+          <div class="map-wrapper">
 
-          <!----history section---->
-          <div class="history">View Booking History</div>
+            <!-- Google Map -->
+            <div id="map"></div>
+
+            <!-- Nearby Stations -->
+            <div class="near-stations">
+              <h6 class="mb-3">Nearby Charging Stations</h6>
+
+              <div class="station-card">
+                <h6>EV Bunk – MG Road</h6>
+                <p>Fast Charger • 2 Slots</p>
+                <button class="btn btn-sm btn-outline-success">Book</button>
+              </div>
+
+              <div class="station-card">
+                <h6>GreenCharge Hub</h6>
+                <p>Normal Charger • 4 Slots</p>
+                <button class="btn btn-sm btn-outline-success">Book</button>
+              </div>
+
+              <div class="station-card">
+                <h6>Volt Station</h6>
+                <p>Fast Charger • 1 Slot</p>
+                <button class="btn btn-sm btn-outline-success">Book</button>
+              </div>
+
+            </div>
+          </div>
 
         </div>
 
+        <!----history section---->
+        <div class="col three history">
+          <div class="history-box">
 
-        <!-----map loction ----->
-        <div class="map">map</div>
+            <!----header section ------>
+            <div class="head-section">
+              <span><i class='bx  bx-history' style='color:#2efa11'></i> </span>
+              <h5>Booking History</h5>
+            </div>
 
+            <div class="history-data">
+              <div class="history-items">
 
+              </div>
+            </div>
+          </div>
+          
+        </div>
 
       </div>
     </div>
-  </div>
 
+  </section>
 
+  <section>
+    <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 120" version="1.1"
+      xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+          <stop stop-color="rgba(241, 246, 245, 1)" offset="0%"></stop>
+          <stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+      <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+        d="M0,12L21.8,24C43.6,36,87,60,131,64C174.5,68,218,52,262,46C305.5,40,349,44,393,50C436.4,56,480,64,524,56C567.3,48,611,24,655,30C698.2,36,742,72,785,72C829.1,72,873,36,916,26C960,16,1004,32,1047,50C1090.9,68,1135,88,1178,84C1221.8,80,1265,52,1309,42C1352.7,32,1396,40,1440,54C1483.6,68,1527,88,1571,90C1614.5,92,1658,76,1702,74C1745.5,72,1789,84,1833,88C1876.4,92,1920,88,1964,72C2007.3,56,2051,28,2095,24C2138.2,20,2182,40,2225,52C2269.1,64,2313,68,2356,72C2400,76,2444,80,2487,74C2530.9,68,2575,52,2618,42C2661.8,32,2705,28,2749,22C2792.7,16,2836,8,2880,8C2923.6,8,2967,16,3011,24C3054.5,32,3098,40,3120,44L3141.8,48L3141.8,120L3120,120C3098.2,120,3055,120,3011,120C2967.3,120,2924,120,2880,120C2836.4,120,2793,120,2749,120C2705.5,120,2662,120,2618,120C2574.5,120,2531,120,2487,120C2443.6,120,2400,120,2356,120C2312.7,120,2269,120,2225,120C2181.8,120,2138,120,2095,120C2050.9,120,2007,120,1964,120C1920,120,1876,120,1833,120C1789.1,120,1745,120,1702,120C1658.2,120,1615,120,1571,120C1527.3,120,1484,120,1440,120C1396.4,120,1353,120,1309,120C1265.5,120,1222,120,1178,120C1134.5,120,1091,120,1047,120C1003.6,120,960,120,916,120C872.7,120,829,120,785,120C741.8,120,698,120,655,120C610.9,120,567,120,524,120C480,120,436,120,393,120C349.1,120,305,120,262,120C218.2,120,175,120,131,120C87.3,120,44,120,22,120L0,120Z">
+      </path>
+    </svg>
+  </section>
 
   <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics-compat.js"></script>
@@ -126,8 +219,9 @@
     "></script>
 
   <!-- Google Maps -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer>
-  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2KxHxYYrp-qKiV6LS24UCe3p-nnJvgb4&callback=initMap"
+    async defer>
+    </script>
 
 </body>
 
