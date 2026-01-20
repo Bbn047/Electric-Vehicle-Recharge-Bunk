@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-clr: linear-gradient(180deg, #b4f1cb, #ffffff);
+    --bg-clr-2: linear-gradient(180deg, #ffffff, #b4f1cb);
+    --bg-sd-clr: #e4e4e4;
+    --admin-sp:hsl(167, 93%, 89%);
+    --second-bg-clr: white;
+    --selection-clr: #16d38e;
+    --text-clr: black;
+}
+
+body {
+    font-family: -apple-system, sans-serif;
+    color: var(--text-clr);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+
+
+/*----------------navbar section --------------------*/
+.main-container {
+    display: flex;
+}
+
+.nav-section {
+    background: var(--admin-sp);
+    padding-top: 10px;
+}
+
+.brand, .container-fluid {
+    border-bottom: 2px solid var(--second-bg-clr);
+
+}
+.container-fluid{
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+
+.custom-nav {
+    width: 220px;
+    height: 100vh;
+}
+
+.nav-items{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.nav-item nav{
+    display: flex;
+    align-items: center;
+}
+.nav-item{
+    display: flex;
+    align-items: center;
+}
+.nav-item i{
+    font-size: 20px;
+}

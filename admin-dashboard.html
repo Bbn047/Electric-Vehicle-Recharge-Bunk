@@ -1,43 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href='https://cdn.boxicons.com/3.0.7/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/3.0.7/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Gruppo">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/admin.css">
 </head>
+
 <body>
 
-<h2>Admin Dashboard – Add EV Bunk</h2>
-
-<input type="text" id="bunkName" placeholder="Bunk Name" /><br><br>
-<input type="text" id="address" placeholder="Address" /><br><br>
-<input type="text" id="mobile" placeholder="Mobile Number" /><br><br>
-<input type="text" id="latitude" placeholder="Latitude" /><br><br>
-<input type="text" id="longitude" placeholder="Longitude" /><br><br>
-
-<button onclick="addBunk()">Add EV Bunk</button>
-
-<hr>
-<h3>Create Recharge Slot</h3>
-
-<input type="text" id="slotBunkId" placeholder="EV Bunk ID" /><br><br>
-<input type="text" id="slotTime" placeholder="Slot Time (10:00 - 11:00)" /><br><br>
-
-<button onclick="addSlot()">Add Slot</button>
-
-<ul id="slotList"></ul>
-
-
-<hr>
-<h3>EV Bunk List</h3>
-<ul id="bunkList"></ul>
-
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
-
-<script src="js/firebase-config.js"></script>
-<script src="js/bunk.js"></script>
-<script src="js/slot.js"></script>
-
-
 </body>
+
 </html>
+<div class="main-container">
+  <div class="navbar-content">
+    <section class="nav-section">
+      <!-- BRAND -->
+      <div class="brand"><a class="navbar-brand d-flex align-items-center" href="#">
+          <i class='bx bx-petrol-pump ms-3 me-2 fs-3' style="color:#0bec18;"></i>
+          <span class="fs-3 brand-name ms-2">EV-BUNK</span>
+        </a>
+      </div>
+      <!------navbar section------------>
+      <nav class="custom-nav">
+        <div class="container-fluid ">
+
+          <div class="nav-items" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <span><i class='bx  me-2 bx-home-alt-2' style='color:#2efa11'></i></span> <a class="nav-link active"
+                  aria-current="page" href="#">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <span><i class='bx  bx-ev-station me-2' style='color:#2efa11'></i> </span><a class="nav-link"
+                  href="#">Stations</a>
+              </li>
+              <li class="nav-item">
+                <span><i class='bx  bx-calendar-week me-2' style='color:#2efa11'></i> </span><a class="nav-link"
+                  href="#">Bookings</a>
+              </li>
+              <li class="nav-item">
+                <span><i class='bx  bx-user me-2' style='color:#2efa11'></i> </span><a class="nav-link"
+                  href="#">Users</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex-shrink-0 dropdown"> <a href="#"
+            class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false"> <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32"
+              class="rounded-circle"> </a>
+        </div>
+
+      </nav>
+    </section>
+  </div>
+
+  <!-----right side main section --------->
+  <div class="main-content">
+    <!--------------main section ------------>
+    <section class="main-section">
+      <div class="main-section">
+        gdgggc9grg9f
+      </div>
+    </section>
+  </div>
+</div>

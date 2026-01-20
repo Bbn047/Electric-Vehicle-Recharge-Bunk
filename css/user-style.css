@@ -9,11 +9,11 @@
 }
 
 :root {
-    --bg-clr: linear-gradient(180deg, #F1F6F5, #ffffff);
-    --bg-clr-2: linear-gradient(180deg, #ffffff, #F1F6F5);
+    --bg-clr: linear-gradient(180deg, #b4f1cb, #ffffff);
+    --bg-clr-2: linear-gradient(180deg, #ffffff, #b4f1cb);
     --bg-sd-clr: #e4e4e4;
     --second-bg-clr: white;
-    --selection-clr: #13ca87;
+    --selection-clr: #16d38e;
     --text-clr: black;
 }
 
@@ -82,7 +82,7 @@ section #wave {
 
 .custom-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr;
     gap: 25px;
     padding: 13px;
@@ -134,7 +134,7 @@ section #wave {
 
 .booking-status .booking-title {
     display: flex;
-    background: var(--bg-sd-clr);
+    background: var(--second-bg-clr);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 5px;
@@ -146,12 +146,14 @@ section #wave {
     border: 1px solid var(--bg-sd-clr);
     border-radius: 10px;
     min-height: 200px;
+    box-shadow: 0 5px 10px var(--second-bg-clr);
 }
 
 .booking-status .booking-data {
     display: flex;
     flex-direction: column;
     padding-top: 30px;
+    
 }
 
 .one .bx-book-library {
@@ -165,7 +167,7 @@ section #wave {
 /*charging*/
 .charging-status .charging-title {
     display: flex;
-    background: var(--bg-sd-clr);
+    background: var(--second-bg-clr);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 5px;
@@ -175,6 +177,7 @@ section #wave {
 
 .one .charging-status {
     border: 1px solid var(--bg-sd-clr);
+   box-shadow: 0 5px 10px var(--second-bg-clr);
     border-radius: 10px;
     min-height: 200px;
 }
@@ -203,7 +206,8 @@ section #wave {
     align-items: start;
     padding: 10px;
     border-radius: 10px;
-    background: var(--bg-sd-clr);
+    background: var(--second-bg-clr);
+    box-shadow: 0 5px 10px var(--bg-sd-clr);
 }
 
 .bunk-list .search {
@@ -272,6 +276,7 @@ section #wave {
 .history {
     border: 1px solid var(--bg-sd-clr);
     border-radius: 10px;
+    box-shadow: 0 5px 10px var(--second-bg-clr);
 }
 
 .history-box {
@@ -281,7 +286,7 @@ section #wave {
 
 .history-box .head-section {
     display: flex;
-    background: var(--bg-sd-clr);
+    background: var(--second-bg-clr);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 10px;
@@ -318,7 +323,7 @@ section #wave {
     }
 
     .custom-grid {
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: .8fr 2.2fr;
     }
 
     .history {
@@ -357,8 +362,12 @@ section #wave {
     }
 
     .map-wrapper {
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr;
+        flex-direction: column;
+        width: 100%;
+        display: flex;
     }
+
 
     #map {
         height: 250px;
