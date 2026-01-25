@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f6f5;
+}
+body p {
+    font-family: Italianno;
+}
+
+
+:root {
+  --brand-green: #0BEC18;
+  --accent-green: #13CA87;
+  --mint-bg: #E8F5F1;
+  --white: #FFFFFF;
+  --border-gray: #E4E4E4;
+  --text-dark: #000000;
+  --text-muted: #666666;
+  --shadow-soft: rgba(0, 0, 0, 0.08);
+  --btn-background: linear-gradient(180deg, #7CCB5A, #4CAF50);
+}
+
+/* Main wrapper */
+.login-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Image container */
+.login-container {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Background image */
+.login-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Login card on top of image */
+.login-card {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* centers it */
+  width:300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*----brand section ------*/
+.brand{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.brand-name{
+    display: flex;
+    gap: 10px;
+   
+}
+.brand-name h5{
+     font-family: audiowide, sans-serif;
+    font-weight: bold;
+}
+.brand-name .bx-petrol-pump{
+    font-size: 30px;
+}
+
+/* Inputs */
+.login-card input {
+  height: 45px;
+  padding: 0 12px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.form-options{
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+  justify-content: space-evenly;
+}
+.remember{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+/*------login button ------*/
+.login-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}

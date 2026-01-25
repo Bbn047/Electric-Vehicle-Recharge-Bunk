@@ -1,21 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>EV-Bunk | login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href='https://cdn.boxicons.com/3.0.7/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/3.0.7/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Gruppo">
+    <!----custom css file---->
+    <link rel="stylesheet" href="./css/login.css">
+
 </head>
+
 <body>
-    <h2>Login</h2>
+    <div class="login-page">
 
-<input type="email" id="email" placeholder="Email" /><br><br>
-<input type="password" id="password" placeholder="Password" /><br><br>
+        <div class="login-container">
+            <!-- Background image -->
+            <img src="./assets/images/login-img.png" alt="Login background">
 
-<button onclick="login()">Login</button>
+            <!-- Overlay form -->
+            <div class="login-card">
 
-   <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
-    <script src="js/firebase-config.js"></script> 
+                <!-------brand section------>
+                <div class="brand">
+                    <div class="brand-name"><i class='bx bx-petrol-pump me-2 fs-3' style="color:#0bec18;"></i>
+                        <h5>EV-BUNK</h5>
+                    </div>
+                    <p>Charge Smarter. Drive Greener.</p>
+                </div>
+
+
+                <form>
+                    <div class="form-group mb-3">
+                        <label>Email</label>
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label>Password</label>
+                        <input type="password" class="form-control" placeholder="Password">
+                    </div>
+
+                    <div class="form-options mb-1">
+                        <div class="remember">
+                            <input type="checkbox" id="remember">
+                            <label for="remember"> Remember me</label>
+                        </div>
+                        <a href="#">Forgot password?</a>
+                    </div>
+
+                    <div class="login-btn mb-2">
+                        <button class="btn btn-success w-100">Login</button>
+                    </div>
+
+                    <p class="signup-text gap-2">
+                        Don’t have an account?
+                        <a href="#">Sign up</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+    </div>
 </body>
+
 </html>
