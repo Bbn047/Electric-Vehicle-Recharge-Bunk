@@ -9,20 +9,21 @@
 }
 
 :root {
-    --bg-clr: linear-gradient(180deg, #b4f1cb, #ffffff);
-    --bg-clr-2: linear-gradient(180deg, #ffffff, #b4f1cb);
-    --bg-sd-clr: #f7f6f6;
-    --admin-sp:rgb(201, 253, 242);
-    --admin-sp-2:rgb(237, 237, 237);
-    --second-bg-clr: white;
-    --selection-clr: #16d38e;
-    --text-clr: black;
+  --brand-green: #0BEC18;
+  --accent-green: #13CA87;
+  --mint-bg: #E8F5F1;
+  --white: #FFFFFF;
+  --border-gray: #E4E4E4;
+  --text-dark: #000000;
+  --text-muted: #666666;
+  --shadow-soft: rgba(0, 0, 0, 0.08);
+  --btn-background: linear-gradient(180deg, #7CCB5A, #4CAF50);
 }
 
 body {
     font-family: -apple-system, sans-serif;
     color: var(--text-clr);
-    background: var(--admin-sp-2) ;
+    background: var() ;
 }
 
 html {
@@ -37,7 +38,7 @@ html {
 }
 
 .nav-section {
-    background: var(--admin-sp);
+    background: ;
     padding-top: 10px;
 }
 
@@ -101,7 +102,7 @@ gap: 15px;
     width: 100%;
 }
 .main-section{
-  background: var(--bg-sd-clr);
+  background: ;
 }
 
 /*header section--------------*/

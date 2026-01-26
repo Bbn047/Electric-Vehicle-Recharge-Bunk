@@ -29,28 +29,28 @@ body p {
 }
 
 /* Main wrapper */
-.login-page {
+.register-page {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
 /* Image container */
-.login-container {
+.register-container {
   position: relative;
   max-width: 500px;
   width: 100%;
 }
 
 /* Background image */
-.login-container img {
+.register-container img {
   width: 100%;
   height: auto;
   display: block;
 }
 
 /* Login card on top of image */
-.login-card {
+.register-card {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -82,7 +82,7 @@ body p {
 }
 
 /* Inputs */
-.login-card input {
+.register-card input {
   height: 45px;
   padding: 0 12px;
   border-radius: 12px;
@@ -107,7 +107,7 @@ form{
     padding: 10px;
 }
 /*------login button ------*/
-.login-btn{
+.register-btn{
     display: flex;
     justify-content: center;
     align-items: center;
