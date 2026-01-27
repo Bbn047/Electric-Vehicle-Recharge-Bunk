@@ -17,82 +17,74 @@
 
 <body>
   <div class="main-container">
-    <div class="navbar-content">
-      <section class="nav-section">
-        <!-- BRAND -->
-        <div class="brand"><a class="navbar-brand d-flex align-items-center" href="#">
-            <i class='bx bx-petrol-pump ms-3 me-2 fs-3' style="color:#0bec18;"></i>
+
+    <!----left section----->
+    <div class="left-section">
+
+      <header class="header">
+        <!----comapany name-->
+        <div class="brand">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <i class='bx bx-petrol-pump ms-3 fs-3' style="color:#0bec18;"></i>
             <span class="fs-3 brand-name ms-2">EV-BUNK</span>
           </a>
+          <!---side bar close button-->
+          <i id="close-icon" class='bx  bx-x-circle bx-close' style='color:black'></i> 
         </div>
-        <!------navbar section------------>
-        <nav class="custom-nav">
-          <div class="container-fluid ">
 
-            <div class="nav-items" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <span><i class='bx  me-2 bx-home-alt-2' style='color:#2efa11'></i></span> <a class="nav-link active"
-                    aria-current="page" href="#">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                  <span><i class='bx  bx-ev-station me-2' style='color:#2efa11'></i> </span><a class="nav-link"
-                    href="#">Stations</a>
-                </li>
-                <li class="nav-item">
-                  <span><i class='bx  bx-calendar-week me-2' style='color:#2efa11'></i> </span><a class="nav-link"
-                    href="#">Bookings</a>
-                </li>
-                <li class="nav-item">
-                  <span><i class='bx  bx-user me-2' style='color:#2efa11'></i> </span><a class="nav-link"
-                    href="#">Users</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="admin-section">
-            <img class="admin-image" src="./assets/images/man.png" alt="user_image">
-
-            <div class="admin-details">
-              <h5 class="admin-name">Admin Name</h5>
-              <p class="admin-tag">Administrator</p>
-            </div>
-          </div>
-
+        <!--left nav items---->
+        <nav class="navbar">
+          <ul class="navbar-nav sidebar">
+            <li class="nav-item">
+              <span><i class='bx  me-2 bx-home-alt-2' style='color:#2efa11'></i></span> <a class="nav-link active"
+                aria-current="page" href="#">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <span><i class='bx  bx-ev-station me-2' style='color:#2efa11'></i> </span><a class="nav-link"
+                href="#">Stations</a>
+            </li>
+            <li class="nav-item">
+              <span><i class='bx  bx-calendar-week me-2' style='color:#2efa11'></i> </span><a class="nav-link"
+                href="#">Bookings</a>
+            </li>
+            <li class="nav-item">
+              <span><i class='bx  bx-user me-2' style='color:#2efa11'></i> </span><a class="nav-link" href="#">Users</a>
+            </li>
+            <li class="nav-item">
+              <span><i class='bx  bx-cog me-2' style='color:#2efa11'></i> </span><a class="nav-link"
+                href="#">Settings</a>
+            </li>
+          </ul>
         </nav>
-      </section>
+      </header>
+
     </div>
 
-    <!-----right side main section --------->
-    <div class="main-content">
-      <!--------------header section ------------>
-      <section class="main-section pt-2">
-        <header class="container header-section">
-          <div class="welcome-data">
-            <h5>Welcome ,Admin!</h5>
-            <p>manage EV Charging Stations Efficiently.</p>
-          </div>
-          <div class="profile">
-            <span><i class='bxf  bx-bell' style='color:#2efa11'></i> </span>
-            <div class="dropdown">
-              <a href="#" class="dropdwon-toggle">
-                <img class="admin-img" src="./assets/images/man.png" alt="profile-img"><i class='bxf fs-3 bx-caret-down'
-                  style='color:#2efa11'></i>
-              </a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-            </div>
-          </div>
-        </header>
-      </section>
+    <!------right section------>
+    <div class="right-section ms-2 pt-2">
+      <!---side bar menu button-->
+      <i id="menu-icon" class='bx bx-menu fs-3'></i>
+      <div class="welcome-note">
+        <p>hello user</p>
+      </div>
+
     </div>
   </div>
 
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="./js/admin.js"></script>
 </body>
 
 </html>

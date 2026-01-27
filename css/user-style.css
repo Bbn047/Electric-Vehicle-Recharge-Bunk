@@ -9,17 +9,36 @@
 }
 
 :root {
-    --bg-clr: linear-gradient(180deg, #b4f1cb, #ffffff);
-    --bg-clr-2: linear-gradient(180deg, #ffffff, #b4f1cb);
-    --bg-sd-clr: #e4e4e4;
-    --second-bg-clr: white;
-    --selection-clr: #16d38e;
-    --text-clr: black;
+    --brand-green: #0BEC18;
+    --accent-green: #13CA87;
+    --mint-bg: #E8F5F1;
+    --mint-bg-2: linear-gradient(180deg, #E8F5F1, #FFFF);
+    --white: #FFFFFF;
+    --border-gray: #E4E4E4;
+    --text-dark: #000000;
+    --text-muted: #666666;
+    --shadow-soft: rgba(0, 0, 0, 0.08);
+    --btn-background: linear-gradient(180deg, #7CCB5A, #4CAF50);
+    --box-bg: #9ad6a4b9;
 }
 
 body {
     font-family: -apple-system, sans-serif;
-    color: var(--text-clr);
+    color: var(--text-dark);
+    background: var(--mint-bg);
+}
+
+body h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: audiowide, sans-serif;
+}
+
+body p {
+    font-family: Italianno;
 }
 
 html {
@@ -41,13 +60,13 @@ section #wave {
 
 /*---------------navbar section --------------------*/
 .navbar {
-    background: var(--second-bg-clr);
+    background: var(--white);
     z-index: 1000;
     font-size: 20px;
 }
 
 .nav-link {
-    color: var(--text-clr);
+    color: var(--text-dark);
 }
 
 .brand {
@@ -91,7 +110,7 @@ section #wave {
 
 /*------------------body content ----------------*/
 .main-section {
-    color: var(--text-clr);
+    color: var(--text-dark);
     position: relative;
 }
 
@@ -99,16 +118,14 @@ section #wave {
     margin: 0;
     padding: 0;
     position: relative;
-    top: -20px;
     display: flex;
     align-items: center;
-    background: var(--bg-clr);
+    background: var(--mint-bg);
 }
 
 .body-section {
-    border-top: 1px solid var(--bg-sd-clr);
-    border-bottom: 1px solid var(--bg-sd-clr);
-    background: var(--bg-clr-2);
+    border-top: 1px solid var(--border-gray);
+    background: var(--mint-bg);
     padding-top: 30px;
     padding-bottom: 40px;
 }
@@ -134,7 +151,7 @@ section #wave {
 
 .booking-status .booking-title {
     display: flex;
-    background: var(--second-bg-clr);
+    background: var(--box-bg);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 5px;
@@ -143,17 +160,17 @@ section #wave {
 }
 
 .one .booking-status {
-    border: 1px solid var(--bg-sd-clr);
+
     border-radius: 10px;
     min-height: 200px;
-    box-shadow: 0 5px 10px var(--second-bg-clr);
+    box-shadow: 0 5px 10px var(--border-gray);
 }
 
 .booking-status .booking-data {
     display: flex;
     flex-direction: column;
     padding-top: 30px;
-    
+
 }
 
 .one .bx-book-library {
@@ -167,7 +184,7 @@ section #wave {
 /*charging*/
 .charging-status .charging-title {
     display: flex;
-    background: var(--second-bg-clr);
+    background: var(--box-bg);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 5px;
@@ -176,8 +193,7 @@ section #wave {
 }
 
 .one .charging-status {
-    border: 1px solid var(--bg-sd-clr);
-   box-shadow: 0 5px 10px var(--second-bg-clr);
+    box-shadow: 0 5px 10px var(--border-gray);
     border-radius: 10px;
     min-height: 200px;
 }
@@ -206,8 +222,8 @@ section #wave {
     align-items: start;
     padding: 10px;
     border-radius: 10px;
-    background: var(--second-bg-clr);
-    box-shadow: 0 5px 10px var(--bg-sd-clr);
+
+    box-shadow: 0 5px 10px var(--border-gray);
 }
 
 .bunk-list .search {
@@ -215,11 +231,11 @@ section #wave {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    border-top: 1px solid var(--bg-sd-clr);
-    border-bottom: 1px solid var(--bg-sd-clr);
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
+    border-top: 3px solid var(--border-gray);
+    border-bottom: 3px solid var(--border-gray);
 }
 
 /* Map Wrapper */
@@ -228,6 +244,11 @@ section #wave {
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
     margin-top: 1rem;
+}
+
+.map-wrapper h6,
+p {
+    font-family: -apple-system, sans-serif;
 }
 
 /* Google Map */
@@ -276,7 +297,7 @@ section #wave {
 .history {
     border: 1px solid var(--bg-sd-clr);
     border-radius: 10px;
-    box-shadow: 0 5px 10px var(--second-bg-clr);
+    box-shadow: 0 5px 10px var(--border-gray);
 }
 
 .history-box {
@@ -286,7 +307,7 @@ section #wave {
 
 .history-box .head-section {
     display: flex;
-    background: var(--second-bg-clr);
+    background: var(--box-bg);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 10px;
@@ -340,7 +361,12 @@ section #wave {
     }
 
     .welcome-note {
-        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 20px;
     }
 
     .main-container {

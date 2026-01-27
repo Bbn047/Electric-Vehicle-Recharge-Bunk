@@ -9,13 +9,18 @@
 }
 
 :root {
-    --bg-clr: linear-gradient(180deg, #b4f1cb, #ffffff);
-    --bg-sd-clr: #e4e4e4;
-    --second-bg-clr: white;
-    --selection-clr: #13ca87;
-    --text-clr: black;
+  --brand-green: #0BEC18;
+  --accent-green: #13CA87;
+  --mint-bg: #E8F5F1;
+  --mint-bg-2:linear-gradient(180deg, #E8F5F1, #FFFF);
+  --white: #FFFFFF;
+  --border-gray: #E4E4E4;
+  --text-dark: #000000;
+  --text-muted: #666666;
+  --shadow-soft: rgba(0, 0, 0, 0.08);
+  --btn-background: linear-gradient(180deg, #7CCB5A, #4CAF50);
+   --box-bg: #9ad6a4b9;
 }
-
 body {
     color: var(--text-clr);
 }
@@ -29,7 +34,7 @@ html {
 }
 
 section {
-    background: var(--bg-clr);
+    background: var(--mint-bg-2);
     margin: 0;
     padding: 0;
 }
@@ -44,7 +49,7 @@ section #wave {
 
 /*-----navbar section ----- */
 .navbar {
-    background: var(--second-bg-clr);
+    background: var(--white);
     z-index: 1000;
     font-size: 20px;
 
@@ -68,7 +73,7 @@ section #wave {
 }
 
 .login-sign .btn {
-    border-color: var(--selection-clr);
+    border-color: var(--border-gray);
     border-radius: 15px;
     width: 100px;
     color: var(--text-clr);
@@ -76,7 +81,7 @@ section #wave {
 }
 
 .sign-up {
-    background: var(--selection-clr);
+    background: var(--btn-background);
 }
 
 .login,
@@ -115,7 +120,7 @@ section #wave {
 .main-text .get-start {
     border-radius: 15px;
     width: 50%;
-    background: var(--selection-clr);
+    background: var(--btn-background);
 }
 
 /*--- bottom section home page ----*/
@@ -150,10 +155,10 @@ section #wave {
 }
 
 .icon-items {
-    background: var(--second-bg-clr);
+    background: var(-);
     min-height: 200px;
     max-width: 200px;
-    box-shadow: 0 5px 10px var(--bg-sd-clr);
+    box-shadow: 0 5px 10px var(--border-gray);
     border-radius: 2rem;
     margin: 0 2rem;
     padding: 20px 20px;
@@ -164,7 +169,7 @@ section #wave {
     align-items: center;
     text-align: center;
     gap: 1.5rem;
-    color: var(--text-clr);
+    color: var(--text-dark);
 }
 
 .icon-items img {
@@ -181,6 +186,24 @@ section #wave {
 
 /* mobile */
 @media (max-width: 767px) {
+    /*------main-section -------------*/
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 90px;
+    }
+    .main-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-text p {
+        text-align: center;
+        padding: 10px;
+    }
      /*----------bottom section -----------*/
     .bottom-content {
         display: flex;
