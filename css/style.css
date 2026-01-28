@@ -19,7 +19,7 @@
   --text-muted: #666666;
   --shadow-soft: rgba(0, 0, 0, 0.08);
   --btn-background: linear-gradient(180deg, #7CCB5A, #4CAF50);
-   --box-bg: #9ad6a4b9;
+   --box-bg: #6bc47a;
 }
 body {
     color: var(--text-clr);

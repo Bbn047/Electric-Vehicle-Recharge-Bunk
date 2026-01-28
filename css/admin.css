@@ -18,13 +18,17 @@
     --text-muted: #666666;
     --shadow-soft: rgba(0, 0, 0, 0.08);
     --btn-background: linear-gradient(180deg, #7CCB5A, #4CAF50);
-    --box-bg: #9ad6a4b9;
+    --box-bg: linear-gradient(180deg, #6fc07c, #0c692b);
 }
 
 body {
     font-family: -apple-system, sans-serif;
     color: var(--text-dark);
     background: var(--mint-bg);
+}
+
+body p {
+    font-family: Italianno;
 }
 
 html {
@@ -34,7 +38,12 @@ html {
 .main-container {
     display: flex;
     align-items: start;
+    width: 100vw;
+}
 
+section {
+    width: 100%;
+    padding: 10px 10px;
 }
 
 /*----left section -----------------*/
@@ -44,17 +53,27 @@ html {
     gap: 10px;
     margin-top: 10px;
     padding-bottom: 10px;
+    padding-right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    height: 80px;
     border-bottom: 2px solid var(--border-gray);
 }
 
-.brand i {
-    font-size: 22px;
+.brand .bx-petrol-pump {
+    font-size: 30px;
+}
+
+.brand .brand-name {
+    font-size: 25px;
+    font-family: audiowide, sans-serif;
 }
 
 .left-section {
+    position: fixed;
     height: 100vh;
     z-index: 1000;
-    width: 200px;
+    width: 220px;
     display: flex;
     flex-direction: column;
     background: var(--box-bg);
@@ -63,8 +82,14 @@ html {
 
 .navbar {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
     font-size: 16px;
     width: 100%;
+    padding-bottom: 70%;
+    border-bottom: 2px solid var(--border-gray);
 }
 
 .nav-item {
@@ -82,6 +107,9 @@ html {
 .right-section {
     display: flex;
     gap: 20px;
+    width: 100vw;
+    margin-left: 220px;
+    padding-left: 20px;
 }
 
 .bx-menu,
@@ -89,7 +117,214 @@ html {
     display: none;
 }
 
+.profile-data {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 20px;
+    padding-top: 40px;
+}
 
+.profile img {
+    width: 50px;
+    height: 50px;
+}
+
+.profile .name {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.name span {
+    font-size: 12px;
+}
+
+
+/*--------top bar section---------------*/
+.right-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 220px;
+    gap: 0;
+    padding-right: 10px;
+    padding-left: 0;
+    width: calc(100% - 220px);
+}
+
+
+.top-section {
+    position: fixed;
+    top: 0;
+    left: 220px;
+    width: calc(100% - 220px);
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: var(--mint-bg);
+    box-shadow: 0 0 10px var(--border-gray);
+    z-index: 999;
+}
+
+.top-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-top img {
+    width: 40px;
+    height: 40px;
+}
+
+.profile-top i {
+    font-size: 30px;
+}
+
+
+/*---------right side main section---------*/
+.main-data {
+    margin-top: 90px;
+    /* same as top-section height */
+    padding: 20px;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+/*-------col one -----------*/
+.col-one {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.one {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.grid-items {
+    background: var(--white);
+    border: 1px solid var(--border-gray);
+    box-shadow: 0 10px 10px var(--border-gray);
+    border-radius: 12px;
+    width: 250px;
+    height: 100px;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+.grid-items img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
+
+.grid-items p {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*---col two ------*/
+.two {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.two-items {
+    padding: 10px 10px;
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--border-gray);
+    box-shadow: 0 10px 10px var(--border-gray);
+    height: 300px;
+}
+
+.station-overview {
+    width: 30vw;
+}
+
+.booking-status {
+    width: 100%;
+}
+
+
+/*----------col three ---------*/
+.three {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 20px;
+}
+
+.three-items {
+    width: 100%;
+    height: 300px;
+    padding: 10px 10px;
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--border-gray);
+    box-shadow: 0 10px 10px var(--border-gray);
+}
+
+
+/* ----------col four ---------*/
+.four{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--border-gray);
+    box-shadow: 0 10px 10px var(--border-gray);
+    padding: 10px 10px;
+}
+
+.four-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 90%;
+    padding: 20px 50px;
+    border-top: 1px solid black;
+}
+
+.four-items div {
+    width: 100%;
+    background: var(--btn-background);
+    border: 1px solid var(--border-gray);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    height: 60px;
+}
 
 /*-----responsive design ------------------*/
 @media(max-width:991px) {
@@ -99,17 +334,36 @@ html {
         display: block;
     }
 
-    .header{
+    .header {
         width: 100%;
     }
-    .brand{
+
+    .brand {
         display: flex;
         align-items: center;
-        gap: 30px;
+        justify-content: space-between;
+
     }
+
+    .brand .brand-name {
+        font-size: 22px;
+    }
+
+    .brand {
+        font-size: 22px;
+        padding-right: 10px;
+    }
+
+    .top-section {
+        left: 0;
+        width: 100%;
+    }
+
+
     .left-section {
-        position: relative;
-        width: 230px;
+        position: fixed;
+        width: 220px;
+        height: 100%;
         top: 0;
         left: 0;
         min-height: 100vh;
@@ -120,5 +374,13 @@ html {
         backdrop-filter: blur(10px);
     }
 
+    .left-section.active {
+        display: flex;
+    }
+
+    .right-section {
+        margin-left: 0;
+        width: 100%;
+    }
 
 }
