@@ -233,14 +233,14 @@ section {
     gap: 20px;
 }
 
-.grid-items p{
-     margin: 0;
+.grid-items p {
+    margin: 0;
     padding: 0;
-    line-height: 1;     
+    line-height: 1;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: start; 
+    align-items: start;
 }
 
 .grid-items img {
@@ -277,12 +277,13 @@ section {
     width: 30vw;
 }
 
-.two-items .booking-graph{
+.two-items .booking-graph {
     display: flex;
     gap: 10px;
 }
-.two-items .line-graph{
-width: 70%;
+
+.two-items .line-graph {
+    width: 70%;
 }
 
 .booking-status {
@@ -293,12 +294,16 @@ width: 70%;
 /*----------col three ---------*/
 .three {
     display: grid;
+    align-items: center;
+    justify-content: center;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
     gap: 20px;
 }
 
 .three-items {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 300px;
     padding: 15px 15px;
@@ -308,20 +313,36 @@ width: 70%;
     box-shadow: 0 10px 10px var(--border-gray);
 }
 
-.three table{
+.table-wrapper {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.three table {
     width: 100%;
 }
-.three table td, th {
-  padding: 10px;
+
+.three table td,
+th {
+    padding: 10px;
 }
-.three th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
-  color: white;
+
+.table-wrapper th {
+    position: sticky;
+    top: 0;
+    background-color: #04AA6D;
+    color: white;
+    z-index: 1;
 }
-.three tr:nth-child(even){background-color: #f2f2f2;}
+
+.three tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
 /* ----------col four ---------*/
 .four {
@@ -346,21 +367,24 @@ width: 70%;
 }
 
 .four-item {
-     display: flex;
-    align-items: center;        /* vertical centering */
-    justify-content: center;    /* center icon+text together */
+    display: flex;
+    align-items: center;
+    /* vertical centering */
+    justify-content: center;
+    /* center icon+text together */
     gap: 10px;
     background: var(--btn-background);
     border: 1px solid var(--border-gray);
     border-radius: 12px;
-    height: 50px; 
+    height: 50px;
 }
+
 .four-item p {
     margin: 0;
     padding: 0;
-    line-height: 1;     
+    line-height: 1;
     display: flex;
-    align-items: center; 
+    align-items: center;
     color: #fff;
 }
 
@@ -424,6 +448,28 @@ width: 70%;
     .right-section {
         margin-left: 0;
         width: 100%;
+    }
+
+    /*--------------col-one----------*/
+    .one {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*-----col-three---------*/
+    .two {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .station-overview {
+        width: 100%;
+    }
+
+
+
+    /*-----col-three---------*/
+    .three {
+        grid-template-columns: 1fr;
     }
 
 }
