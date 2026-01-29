@@ -226,13 +226,21 @@ section {
     border: 1px solid var(--border-gray);
     box-shadow: 0 10px 10px var(--border-gray);
     border-radius: 12px;
-    width: 250px;
-    height: 100px;
-    padding: 10px 10px;
+    width: 250;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 15px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.grid-items p{
+     margin: 0;
+    padding: 0;
+    line-height: 1;     
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start; 
 }
 
 .grid-items img {
@@ -246,7 +254,6 @@ section {
     flex-direction: column;
 }
 
-
 /*---col two ------*/
 .two {
     display: grid;
@@ -258,7 +265,7 @@ section {
 }
 
 .two-items {
-    padding: 10px 10px;
+    padding: 15px 15px;
     background: var(--white);
     border-radius: 12px;
     border: 1px solid var(--border-gray);
@@ -268,6 +275,14 @@ section {
 
 .station-overview {
     width: 30vw;
+}
+
+.two-items .booking-graph{
+    display: flex;
+    gap: 10px;
+}
+.two-items .line-graph{
+width: 70%;
 }
 
 .booking-status {
@@ -286,16 +301,30 @@ section {
 .three-items {
     width: 100%;
     height: 300px;
-    padding: 10px 10px;
+    padding: 15px 15px;
     background: var(--white);
     border-radius: 12px;
     border: 1px solid var(--border-gray);
     box-shadow: 0 10px 10px var(--border-gray);
 }
 
+.three table{
+    width: 100%;
+}
+.three table td, th {
+  padding: 10px;
+}
+.three th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+.three tr:nth-child(even){background-color: #f2f2f2;}
 
 /* ----------col four ---------*/
-.four{
+.four {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -307,23 +336,37 @@ section {
     padding: 10px 10px;
 }
 
-.four-items{
+.four-items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    width: 90%;
+    width: 100%;
     padding: 20px 50px;
     border-top: 1px solid black;
 }
 
-.four-items div {
-    width: 100%;
+.four-item {
+     display: flex;
+    align-items: center;        /* vertical centering */
+    justify-content: center;    /* center icon+text together */
+    gap: 10px;
     background: var(--btn-background);
     border: 1px solid var(--border-gray);
     border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    height: 60px;
+    height: 50px; 
+}
+.four-item p {
+    margin: 0;
+    padding: 0;
+    line-height: 1;     
+    display: flex;
+    align-items: center; 
+    color: #fff;
+}
+
+.four-item img {
+    width: 30px;
+    height: 30px;
 }
 
 /*-----responsive design ------------------*/
