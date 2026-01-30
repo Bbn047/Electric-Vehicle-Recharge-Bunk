@@ -34,26 +34,35 @@
                 </div>
 
 
-                <form class="mt-0">
+                <form class="mt-0" id="register">
                     <div class=" form-group d-flex mt-0 custom-input">
-                        <div class="col-6 me-2">
-                            <input type="text" class="form-control" placeholder="First name">
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="First name" name="fname">
                         </div>
                         <div class="col-6">
-                            <input type="text" class="form-control" placeholder="Last name">
+                            <input type="text" class="form-control" placeholder="Last name" name="lname">
                         </div>
                     </div>
 
                     <div class="mt-2">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" class="form-control" placeholder="Email" name="mail">
                     </div>
 
                     <div class="mt-2">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" class="form-control" placeholder="Password" name="pswd">
                     </div>
 
                     <div class="mt-2">
-                        <input type="password" class="form-control" placeholder="Confirm password">
+                        <input type="password" class="form-control" placeholder="Confirm password" name="pswd2">
+                    </div>
+
+                    <!---------------user/admin selection------------>
+                    <div class="mt-2">
+                        <select class="form-control role-selection" name="role" required>
+                            <option value="">Select Role</option>
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                        </select>
                     </div>
 
                     <div class="register-btn mt-2 mb-2">
@@ -69,6 +78,20 @@
         </div>
 
     </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/auth.js"></script>
+
 </body>
 
 </html>

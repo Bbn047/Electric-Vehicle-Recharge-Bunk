@@ -1,62 +1,46 @@
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } 
-from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+const form = document.getElementById("register");
 
-import { getFirestore, setDoc, doc, getDoc } 
-from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-const auth = getAuth();
-const db = getFirestore();
+  const firstName = form.fname.value;
+  const lastName = form.lname.value;
+  const email = form.mail.value;
+  const password = form.pswd.value;
+  const confirmPassword = form.pswd2.value;
+  const role = form.role.value;
 
-/* REGISTER */
-window.register = function () {
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  const role = document.getElementById("role").value;
+  if (password !== confirmPassword) {
+    alert("Passwords do not match");
+    return;
+  }
 
-  createUserWithEmailAndPassword(auth, email, password)
-    .then(async (userCredential) => {
+  if (!role) {
+    alert("Please select a role");
+    return;
+  }
+
+  // Create user using Firebase Authentication
+  auth.createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
       const user = userCredential.user;
 
-      await setDoc(doc(db, "users", user.uid), {
-        name,
-        email,
-        role,
-        createdAt: new Date()
+      // Store user details in Firestore
+      return db.collection("users").doc(user.uid).set({
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        role: role, // user or admin
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
       });
-
-      console.log("User Registered:", email);
+    })
+    .then(() => {
       alert("Registration successful");
-      window.location.href = "login.html";
+      form.reset();
+      // window.location.href = "login.html";
     })
     .catch((error) => {
-      console.error("Register Error:", error.message);
+      console.error("Registration Error:", error);
       alert(error.message);
     });
-};
-
-/* LOGIN */
-window.login = function () {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-
-  signInWithEmailAndPassword(auth, email, password)
-    .then(async (userCredential) => {
-      const user = userCredential.user;
-      const docRef = doc(db, "users", user.uid);
-      const docSnap = await getDoc(docRef);
-
-      const role = docSnap.data().role;
-      console.log("Login Success:", email, role);
-
-      if (role === "admin") {
-        window.location.href = "admin-dashboard.html";
-      } else {
-        window.location.href = "user-dashboard.html";
-      }
-    })
-    .catch((error) => {
-      console.error("Login Error:", error.message);
-      alert(error.message);
-    });
-};
+});

@@ -89,18 +89,6 @@ body p {
   font-size: 14px;
 }
 
-.form-options{
-    display: flex;
-    font-size: 14px;
-    align-items: center;
-  justify-content: space-evenly;
-}
-.remember{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
 form{
     display: flex;
     flex-direction: column;
