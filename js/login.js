@@ -36,3 +36,8 @@ loginForm.addEventListener("submit", function(e) {
       alert(error.message);
     });
 });
+
+
+document.getElementById("home").addEventListener("click", () =>{
+  window.location.href = "index.html";
+});

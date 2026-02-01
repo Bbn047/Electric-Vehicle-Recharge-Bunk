@@ -38,7 +38,7 @@ body p {
 /* Image container */
 .register-container {
   position: relative;
-  max-width: 500px;
+  max-width: 550px;
   width: 100%;
 }
 
@@ -67,6 +67,7 @@ body p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .brand-name{
     display: flex;
@@ -88,11 +89,25 @@ body p {
   border-radius: 12px;
   font-size: 14px;
 }
-
+.custom-input{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+ 
+}
 form{
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 5px;
+}
+
+.role-selection{
+  font-size: 14px;
+   padding: 0 12px;
+    height: 45px;
+  border-radius: 12px;
+
 }
 /*------login button ------*/
 .register-btn{

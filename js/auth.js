@@ -43,4 +43,6 @@ form.addEventListener("submit", function (e) {
       console.error("Registration Error:", error);
       alert(error.message);
     });
+    
+    
 });

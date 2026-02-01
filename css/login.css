@@ -38,7 +38,7 @@ body p {
 /* Image container */
 .login-container {
   position: relative;
-  max-width: 500px;
+  max-width: 550px;
   width: 100%;
 }
 
@@ -67,6 +67,7 @@ body p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .brand-name{
     display: flex;
