@@ -69,6 +69,10 @@ section {
     font-family: audiowide, sans-serif;
 }
 
+header{
+    color: var(--white);
+}
+
 .left-section {
     position: fixed;
     height: 100vh;
@@ -88,7 +92,7 @@ section {
     justify-content: space-between;
     font-size: 16px;
     width: 100%;
-    padding-bottom: 70%;
+    padding-bottom: 60%;
     border-bottom: 2px solid var(--border-gray);
 }
 
@@ -101,6 +105,9 @@ section {
 .nav-item i {
     font-size: 20px;
 }
+.nav-item a{
+    color: var(--white);
+}
 .profile{
   text-align: center;
 }
@@ -111,6 +118,18 @@ section {
 }
 .admin-name{
     text-transform: capitalize;
+}
+.logout{
+     background: var(--btn-background);
+     border-radius: 12px;
+}
+.logout a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: medium;
+}
+.profile-admin{
+    flex-direction: column;
 }
 
 

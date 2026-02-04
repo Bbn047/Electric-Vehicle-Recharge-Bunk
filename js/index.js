@@ -1,12 +1,20 @@
-document.getElementById("login").addEventListener("click", () => {
-  window.location.href = "login.html";
-});
+const loginBtn = document.getElementById("login");
+if(loginBtn){
+  loginBtn.addEventListener("click", () =>{
+    window.location.href = "login.html";
+  });
+}
 
-document.getElementById("sign-up").addEventListener("click", () =>{
+const signupBtn = document.getElementById("sign-up");
+if(signupBtn){
+  signupBtn.addEventListener("click", () =>{
     window.location.href = "register.html";
-});
+  });
+}
 
-
-document.getElementById("get-start").addEventListener("click", () =>{
-  window.location.href= "login.html";
-});
+const start = document.getElementById("get-start");
+if(start){
+  start.addEventListener("click", () =>{
+    window.location.href = "login.html";
+  });
+}

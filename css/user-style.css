@@ -89,7 +89,14 @@ section #wave {
 .text-items {
     margin-left: 8px;
     font-size: 15px;
+    text-transform: capitalize;
 }
+
+.custom-menu{
+    border-radius: 12px;
+     padding: 12px 16px;
+}
+
 
 /*---- body section ----*/
 
@@ -162,15 +169,16 @@ section #wave {
 .one .booking-status {
 
     border-radius: 10px;
-    min-height: 200px;
+    max-height:250px;
     box-shadow: 0 5px 10px var(--border-gray);
 }
 
 .booking-status .booking-data {
     display: flex;
     flex-direction: column;
+    max-height: 150px;
+    overflow-y: auto;
     padding-top: 30px;
-
 }
 
 .one .bx-book-library {
@@ -192,10 +200,11 @@ section #wave {
     gap: 10px;
 }
 
+
 .one .charging-status {
     box-shadow: 0 5px 10px var(--border-gray);
     border-radius: 10px;
-    min-height: 200px;
+    min-height: 250px;
 }
 
 .one .bx-bolt-circle {
@@ -222,7 +231,6 @@ section #wave {
     align-items: start;
     padding: 10px;
     border-radius: 10px;
-
     box-shadow: 0 5px 10px var(--border-gray);
 }
 
@@ -303,6 +311,8 @@ p {
 .history-box {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .history-box .head-section {
@@ -313,6 +323,10 @@ p {
     padding: 10px;
     align-items: center;
     gap: 10px;
+}
+.history-data{
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 .history-box .bx-history {

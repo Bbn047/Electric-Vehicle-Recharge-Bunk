@@ -29,7 +29,7 @@
             <span class=" brand-name ms-2">EV-BUNK</span>
           </a>
           <!---side bar close button-->
-          <i id="close-icon" class='bx  bx-x-circle bx-close' style='color:black'></i>
+          <i id="close-icon" class='bx  bx-x-circle bx-close' style='color:rgb(255, 255, 255)'></i>
         </div>
 
         <!--left nav items---->
@@ -61,7 +61,12 @@
         <div class="profile">
           <div class="profile-data">
             <img src="./assets/images/man.png" alt="pro-pic">
-            <p>Administrator</p>
+
+            <div class="profile-admin d-flex">
+              <p>Administrator</p>
+              <button class="logout" id="logoutBtn">Logout</button>
+            </div>
+
           </div>
 
         </div>
@@ -81,7 +86,7 @@
           <i id="menu-icon" class='bx bx-menu fs-3'></i>
 
           <div class="welcome-note">
-            <h5>Welcome, <span id="admin-name"></span></h5>
+            <h5>Welcome, <span class="admin-name" id="admin-name"></span></h5>
             <p>Manage EV Charging Stations Efficiently</p>
           </div>
         </div>
@@ -103,7 +108,7 @@
 
               <div class="grid-items stations">
                 <img src="./assets/images/petrol-pump.png" alt="pump">
-                <p>Total Stations <span>25</span></p>
+                <p>Total Stations <span id="totalStations">0</span></p>
               </div>
               <div class="grid-items bookings">
                 <img src="./assets/images/calendar.png" alt="calendar">
@@ -111,7 +116,7 @@
               </div>
               <div class="grid-items user-registered">
                 <img src="./assets/images/people.png" alt="people">
-                <p>User Registerd <span>475</span></p>
+                <p>User Registerd <span id="totalUsers">0</span></p>
               </div>
               <div class="grid-items reveue">
                 <img src="./assets/images/money-bag.png" alt="moneybag">
@@ -167,26 +172,19 @@
                 <hr>
                 <div class="table-wrapper">
                   <table>
-                    <tr>
-                      <th>Station Name</th>
-                      <th>Location</th>
-                      <th>Status</th>
-                      <th>Availability</th>
-                    </tr>
+                    <thead>
+                      <tr>
+                        <th>Station Name</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                        <th>Total Slots</th>
+                      </tr>
+                    </thead>
 
-                    <tr>
-                      <td>Alfreds Futterkiste</td>
-                      <td>Maria Anders</td>
-                      <td>Germany</td>
-                      <td>hfhofhf</td>
-                    </tr>
+                    <tbody id="stationTableBody">
 
-                    <tr>
-                      <td>Alfreds Futterkiste</td>
-                      <td>Maria Anders</td>
-                      <td>Germany</td>
-                      <td>hfhofhf</td>
-                    </tr>
+                    </tbody>
+
                   </table>
                 </div>
               </div>
@@ -272,7 +270,7 @@
 
             <div class="four-items">
 
-              <div class="four-item stations">
+              <div id="addStationBtn" class="four-item stations" tabindex="0" role="button">
                 <img src="./assets/images/add-items.png" alt="add-items">
                 <p>Add Stations</p>
               </div>
@@ -302,16 +300,75 @@
 
 
 
+
+
+  <!-- Add Station Modal -->
+  <div class="modal fade" id="addStationModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Add New Station</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <form id="addStationForm">
+
+            <div class="mb-2">
+              <input type="text" class="form-control" id="stationName" placeholder="Station Name" required>
+            </div>
+
+            <div class="mb-2">
+              <input type="text" class="form-control" id="stationLocation" placeholder="Location" required>
+              <div class="d-flex mt-2">
+                <input type="number" class="form-control me-2" id="lat" placeholder="Latitude">
+                <input type="number" class="form-control" id="lng" placeholder="Longitude">
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <input type="number" class="form-control" id="totalSlots" placeholder="Total Slots" required>
+            </div>
+
+            <div class="mb-2">
+              <input type="number" class="form-control" id="availableSlots" placeholder="Available Slots" required>
+            </div>
+
+            <div class="mb-2">
+              <input type="number" class="form-control" id="pricePerUnit" placeholder="Price per unit (₹)">
+            </div>
+
+
+            <div class="mb-2">
+              <select class="form-control" id="stationStatus">
+                <option value="Open">Open</option>
+                <option value="Closed">Closed</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">
+              Add Station
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
     integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
     crossorigin="anonymous"></script>
-<script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
-<script src="js/firebase-config.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
   <script src="./js/admin.js"></script>
 </body>
 

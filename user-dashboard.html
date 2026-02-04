@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>User Dashboard</title>
+  <title>User Dashboard </title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link href='https://cdn.boxicons.com/3.0.7/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
@@ -42,21 +42,22 @@
           <!-- Welcome text -->
           <li class="nav-item d-flex align-items-center me-3">
             <span class="text-items">Welcome,</span>
-            <span class="text-items fw-semibold ms-1" id="username">John</span>
+            <span class="text-items fw-semibold ms-1" id="username"></span>
           </li>
 
           <!-- Profile dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle p-0" href="#" data-bs-toggle="dropdown">
+            <a class="nav-link dropdown-toggle p-0" href="#" data-bs-toggle="dropdown" role="button"
+              aria-expanded="false">
               <img src="https://github.com/mdo.png" width="32" height="32" class="rounded-circle">
             </a>
-            <ul class="dropdown-menu dropdown-menu-end">
+            <ul class="dropdown-menu dropdown-menu-end custom-menu">
               <li><a class="dropdown-item" href="#">Profile</a></li>
               <li><a class="dropdown-item" href="#">Settings</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Sign out</a></li>
+              <li><a class="dropdown-item" href="#" id="logoutBtn">Logout</a></li>
             </ul>
           </li>
 
@@ -108,8 +109,7 @@
                 <h5 class="booking-heading"> My Booking</h5>
               </div>
               <div class="booking-data ms-3 mt-3">
-                <p>next booking</p>
-                <p>station details</p>
+                <!--booking data-->
               </div>
             </div>
             <div class="charging-status">
@@ -118,9 +118,12 @@
                 <h5 class="charging-heading">Charging Status</h5>
               </div>
               <div class="charging-data ms-3 mt-3">
-                <p>charging</p>
-                <p>time remaining</p>
+                <!--charging data-->
               </div>
+
+              <button onclick="payNow(bookingId)" class="btn btn-success">
+                Pay ₹<span id="amount"></span>
+              </button>
             </div>
           </div>
         </div>
@@ -147,24 +150,7 @@
             <!-- Nearby Stations -->
             <div class="near-stations">
               <h6 class="mb-3">Nearby Charging Stations</h6>
-
-              <div class="station-card">
-                <h6>EV Bunk – MG Road</h6>
-                <p>available slots • 2 Slots</p>
-                <button class="btn btn-sm btn-outline-success">Book</button>
-              </div>
-
-              <div class="station-card">
-                <h6>GreenCharge Hub</h6>
-                <p>available slots • 4 Slots</p>
-                <button class="btn btn-sm btn-outline-success">Book</button>
-              </div>
-
-              <div class="station-card">
-                <h6>Volt Station</h6>
-                <p>available slots • 1 Slot</p>
-                <button class="btn btn-sm btn-outline-success">Book</button>
-              </div>
+              <!--station data-->
 
             </div>
           </div>
@@ -210,16 +196,28 @@
     </svg>
   </section>
 
-<script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
-<script src="js/firebase-config.js"></script>
-  <script src="js/map.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
+
+  <script src="js/firebase-config.js"></script>
+
   <script src="./js/user_dashboard.js"></script>
+  <script src="./js/booking.js"></script>
+
   <!-- Google Maps -->
+  <script src="js/map.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2KxHxYYrp-qKiV6LS24UCe3p-nnJvgb4&callback=initMap"
     async defer>
     </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
 
 </body>
 
