@@ -112,7 +112,7 @@
               </div>
               <div class="grid-items bookings">
                 <img src="./assets/images/calendar.png" alt="calendar">
-                <p>Active bookings <span>39</span></p>
+                <p>Active bookings <span id="activeBookings">0</span></p>
               </div>
               <div class="grid-items user-registered">
                 <img src="./assets/images/people.png" alt="people">
@@ -120,7 +120,17 @@
               </div>
               <div class="grid-items reveue">
                 <img src="./assets/images/money-bag.png" alt="moneybag">
-                <p>Revenue This Month <span>$24,759</span></p>
+                <div class="w-100">
+                  <select id="incomeFilter" class="form-select form-select-sm mb-2">
+                    <option value="day">Today</option>
+                    <option value="month" selected>This Month</option>
+                    <option value="year">This Year</option>
+                  </select>
+
+                  <p class="mb-0">
+                    Total Income: ₹<span id="incomeValue">0</span>
+                  </p>
+                </div>
               </div>
 
             </div>
@@ -148,12 +158,14 @@
                 <hr>
 
                 <div class="booking-graph">
-
-                  <div class="line-graph">graph</div>
+                  <!-----line graph-->
+                  <div class="line-graph">
+                    <canvas id="bookingChart" height="140"></canvas>
+                  </div>
 
                   <div class="graph-status">
-                    <p>32 <span>Bookings</span></p>
-                    <p>15 <span>cancellations</span></p>
+                    <p><span id="totalBookingCount">0</span> <span>Bookings</span></p>
+                    <p><span id="cancelBookingCount">0</span> <span>Cancellations</span></p>
                   </div>
 
                 </div>
@@ -194,66 +206,19 @@
                 <hr>
                 <div class="table-wrapper">
                   <table>
+                    <thead></thead>
                     <tr>
+                      <th>user name</th>
                       <th>Station Name</th>
                       <th>Location</th>
                       <th>Status</th>
-                      <th>Availability</th>
+                      <th>amount</th>
                     </tr>
+                    </thead>
 
-                    <tr>
-                      <td>Alfreds Futterkiste</td>
-                      <td>Maria Anders</td>
-                      <td>Germany</td>
-                      <td>hfhofhf</td>
-                    </tr>
+                    <tbody id="recentBookingsBody">
 
-                    <tr>
-                      <td>Alfreds Futterkiste</td>
-                      <td>Maria Anders</td>
-                      <td>Germany</td>
-                      <td>hfhofhf</td>
-                    </tr>
-
-                    <tr>
-                      <td>Alfreds Futterkiste</td>
-                      <td>Maria Anders</td>
-                      <td>Germany</td>
-                      <td>hfhofhf</td>
-                    </tr>
-
-                    <tr>
-                      <td>Alfreds Futterkiste</td>
-                      <td>Maria Anders</td>
-                      <td>Germany</td>
-                      <td>hfhofhf</td>
-                    </tr>
-                    <tr>
-                      <td>Alfreds Futterkiste</td>
-                      <td>Maria Anders</td>
-                      <td>Germany</td>
-                      <td>hfhofhf</td>
-                    </tr>
-
-                    <tr>
-                      <td>Alfreds Futterkiste</td>
-                      <td>Maria Anders</td>
-                      <td>Germany</td>
-                      <td>hfhofhf</td>
-                    </tr>
-                    <tr>
-                      <td>Alfreds Futterkiste</td>
-                      <td>Maria Anders</td>
-                      <td>Germany</td>
-                      <td>hfhofhf</td>
-                    </tr>
-
-                    <tr>
-                      <td>Alfreds Futterkiste</td>
-                      <td>Maria Anders</td>
-                      <td>Germany</td>
-                      <td>hfhofhf</td>
-                    </tr>
+                    </tbody>
                   </table>
                 </div>
               </div>
@@ -369,6 +334,7 @@
   <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
   <script src="js/firebase-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./js/admin.js"></script>
 </body>
 
