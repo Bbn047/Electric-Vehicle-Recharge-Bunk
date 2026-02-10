@@ -75,11 +75,14 @@ const db = firebase.firestore();
 
 
 -------
-
+## create collections
+bookings
+users
+evBunks
 
 ## Usage
 
-User
+## User
 
 Sign up or log in.
 
@@ -89,7 +92,7 @@ Book a slot and monitor charging progress.
 
 Pay when charging completes; view completed bookings in history.
 
-Admin
+## Admin
 
 Log in with admin credentials.
 
