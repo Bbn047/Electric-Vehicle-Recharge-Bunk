@@ -4,13 +4,19 @@ function initMap() {
     center: { lat: 12.9716, lng: 77.5946 }
   });
 
-  db.collection("evBunks").where("status", "==", "Open")
+  db.collection("evBunks")
+    .where("status", "==", "Open")
     .onSnapshot(snapshot => {
       snapshot.forEach(doc => {
         const s = doc.data();
 
+        if (!s.locationCoords) return; // 🛡 safety
+
         const marker = new google.maps.Marker({
-          position: { lat: s.lat, lng: s.lng },
+          position: {
+            lat: Number(s.locationCoords.lat),
+            lng: Number(s.locationCoords.lng)
+          },
           map,
           title: s.name
         });

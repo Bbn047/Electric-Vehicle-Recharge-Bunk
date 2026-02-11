@@ -110,15 +110,36 @@ const addStationForm = document.getElementById("addStationForm");
 addStationForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  const latValue = document.getElementById("lat").value.trim();
+  const lngValue = document.getElementById("lng").value.trim();
+
+  if (!latValue || !lngValue) {
+    alert("Latitude and Longitude are required");
+    return;
+  }
+
+  const lat = parseFloat(latValue);
+  const lng = parseFloat(lngValue);
+
+  if (isNaN(lat) || isNaN(lng)) {
+    alert("Latitude and Longitude must be valid numbers");
+    return;
+  }
+
   const stationData = {
-    name: document.getElementById("stationName").value,
-    location: document.getElementById("stationLocation").value,
-    lat: Number(document.getElementById("lat").value),
-    lng: Number(document.getElementById("lng").value),
-    totalSlots: Number(document.getElementById("totalSlots").value),
-    availableSlots: Number(document.getElementById("availableSlots").value),
+    name: document.getElementById("stationName").value.trim(),
+    location: document.getElementById("stationLocation").value.trim(),
+
+    // 🔥 IMPORTANT: keep lat/lng INSIDE location (consistent everywhere)
+    locationCoords: {
+      lat,
+      lng
+    },
+
+    totalSlots: parseInt(document.getElementById("totalSlots").value) || 0,
+    availableSlots: parseInt(document.getElementById("availableSlots").value) || 0,
     status: document.getElementById("stationStatus").value,
-    pricePerUnit: Number(document.getElementById("pricePerUnit").value),
+    pricePerUnit: Number(document.getElementById("pricePerUnit").value) || 0,
     createdAt: firebase.firestore.FieldValue.serverTimestamp()
   };
 
@@ -132,9 +153,10 @@ addStationForm.addEventListener("submit", (e) => {
     })
     .catch((error) => {
       console.error("Error adding station:", error);
-      alert("Failed to add station");
+      alert(error.message);
     });
 });
+
 
 
 // Load stations into admin table
@@ -376,10 +398,8 @@ function loadBookingStatistics() {
         // total bookings
         bookingMap[dateKey] = (bookingMap[dateKey] || 0) + 1;
         totalBookings++;
-
-         const status = doc.data().status;
-        if (status === "paid" || status === "pending" || status === "started" || status === "stopped") {
-            totalBookings++;
+        if (b.status !== "cancelled") {
+          totalBookings++;
         }
         // cancellations
         if (b.status === "cancelled") {
