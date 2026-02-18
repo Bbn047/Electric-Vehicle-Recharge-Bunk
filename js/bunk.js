@@ -1,7 +1,3 @@
-import { getFirestore, collection, addDoc, getDocs }
-from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
-
-const db = getFirestore();
 
 /* ADD EV BUNK */
 window.addBunk = async function () {
@@ -25,7 +21,8 @@ window.addBunk = async function () {
         lat: latitude,
         lng: longitude
       },
-      createdAt: new Date()
+      createdAt: firebase.firestore.FieldValue.serverTimestamp()
+
     });
 
     console.log("EV Bunk Added:", name);
